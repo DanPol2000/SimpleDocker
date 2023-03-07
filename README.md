@@ -14,11 +14,11 @@
 
 **== Задание ==**
 
-##### Взять официальный докер образ с **nginx** и выкачать его при помощи `docker pull`
-[ ]<img width="1303" alt="pull nginx" src="https://user-images.githubusercontent.com/89585637/223464236-01088090-2d04-45e4-a514-33c99e83710f.png">
-##### Проверить наличие докер образа через `docker images`
+**Взять официальный докер образ с **nginx** и выкачать его при помощи `docker pull`**
 <img width="1303" alt="pull nginx" src="https://user-images.githubusercontent.com/89585637/223464236-01088090-2d04-45e4-a514-33c99e83710f.png">
-##### Запустить докер образ через `docker run -d [image_id|repository]`
+**Проверить наличие докер образа через `docker images`**
+<img width="1303" alt="pull nginx" src="https://user-images.githubusercontent.com/89585637/223464236-01088090-2d04-45e4-a514-33c99e83710f.png">
+**Запустить докер образ через `docker run -d [image_id|repository]`**
 <img width="1256" alt="docker run " src="https://user-images.githubusercontent.com/89585637/223464592-26d9dbc1-828d-4d46-98c3-fa9cd3d73c56.png">
 ##### Проверить, что образ запустился через `docker ps`
 ##### Посмотреть информацию о контейнере через `docker inspect [container_id|container_name]`
