@@ -18,7 +18,7 @@
 ##### Проверить наличие докер образа через `docker images`
 ##### Запустить докер образ через `docker run -d [image_id|repository]`
 ##### Проверить, что образ запустился через `docker ps`
-![ ]![Uploading pull nginx.png…]()
+![ ]<img width="1303" alt="pull nginx" src="https://user-images.githubusercontent.com/89585637/223464236-01088090-2d04-45e4-a514-33c99e83710f.png">
 
 ##### Посмотреть информацию о контейнере через `docker inspect [container_id|container_name]`
 ![ ](Images/2.png)
