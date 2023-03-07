@@ -14,41 +14,47 @@
 
 **== Задание ==**
 
-**Взять официальный докер образ с **nginx** и выкачать его при помощи `docker pull`**
+##### Взять официальный докер образ с **nginx** и выкачать его при помощи `docker pull`
 
 <img width="1303" alt="pull nginx" src="https://user-images.githubusercontent.com/89585637/223464236-01088090-2d04-45e4-a514-33c99e83710f.png">
 
-**Проверить наличие докер образа через `docker images`**
+##### Проверить наличие докер образа через `docker images`
 
 <img width="1303" alt="pull nginx" src="https://user-images.githubusercontent.com/89585637/223464236-01088090-2d04-45e4-a514-33c99e83710f.png">
-**Запустить докер образ через `docker run -d [image_id|repository]`**
+
+##### Запустить докер образ через `docker run -d [image_id|repository]`
 
 <img width="1256" alt="docker run " src="https://user-images.githubusercontent.com/89585637/223464592-26d9dbc1-828d-4d46-98c3-fa9cd3d73c56.png">
-**Проверить, что образ запустился через `docker ps`**
-**Посмотреть информацию о контейнере через `docker inspect [container_id|container_name]`**
+
+##### Проверить, что образ запустился через `docker ps`
+##### Посмотреть информацию о контейнере через `docker inspect [container_id|container_name]`
 
 <img width="1808" alt="docker inspect" src="https://user-images.githubusercontent.com/89585637/223464788-9464e193-1da7-4cd3-862e-1fba7e03c6af.png">
-**По выводу команды определить и поместить в отчёт размер контейнера, список замапленных портов и ip контейнера**
+
+##### По выводу команды определить и поместить в отчёт размер контейнера, список замапленных портов и ip контейнера
 Размер контейнера (с флагом -s, в kB));
 
 <img width="1621" alt="docker inspect(1)" src="https://user-images.githubusercontent.com/89585637/223464933-a51d410a-cab3-43b9-8e41-2fb0722a1d02.png">
 <img width="1711" alt="docker inspect(2)" src="https://user-images.githubusercontent.com/89585637/223464975-4ec26e6f-ac18-4b8b-b823-0532b21e79bc.png">
-**Остановить докер образ через `docker stop [container_id|container_name]`**
+
+##### Остановить докер образ через `docker stop [container_id|container_name]`
 
 <img width="1652" alt="docker stop" src="https://user-images.githubusercontent.com/89585637/223465057-1a5ed93b-3230-462a-8fea-6c443cf89546.png">
-**Проверить, что образ остановился через `docker ps`**
+
+##### Проверить, что образ остановился через `docker ps`
 
 <img width="1679" alt="docker ps" src="https://user-images.githubusercontent.com/89585637/223465112-0962d31f-4f45-4581-8fa8-7bb65dcb25e5.png">
-**Запустить докер с замапленными портами 80 и 443 на локальную машину через команду *run***
+
+##### Запустить докер с замапленными портами 80 и 443 на локальную машину через команду *run*
 
 <img width="1788" alt="ports" src="https://user-images.githubusercontent.com/89585637/223465434-2a1c2aee-65da-4162-8cda-bdf64af5d807.png">
 
-**Проверить, что в браузере по адресу *localhost:80* доступна стартовая страница **nginx****
+##### Проверить, что в браузере по адресу *localhost:80* доступна стартовая страница **nginx**
 
-##### Прочитать конфигурационный файл *nginx.conf* внутри докер образа через команду *exec*****
 <img width="1963" alt="localhost" src="https://user-images.githubusercontent.com/89585637/223465232-3a3ad8f0-d478-4ffe-a3a1-8691a0fbee2a.png">
 <img width="2287" alt="443" src="https://user-images.githubusercontent.com/89585637/223465277-31fb0e8c-8539-4f2c-8405-2d886793a8ba.png">
-**Перезапустить докер контейнер через `docker restart [container_id|container_name]`**
+
+##### Перезапустить докер контейнер через `docker restart [container_id|container_name]`
 **Проверить любым способом, что контейнер запустился**
 
 <img width="1690" alt="docker restart" src="https://user-images.githubusercontent.com/89585637/223465574-e5815912-22e5-4b3b-bdd5-248ca6c26f79.png">
