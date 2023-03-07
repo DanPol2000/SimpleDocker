@@ -45,6 +45,7 @@
 
 **Проверить, что в браузере по адресу *localhost:80* доступна стартовая страница **nginx****
 
+##### Прочитать конфигурационный файл *nginx.conf* внутри докер образа через команду *exec*****
 <img width="1963" alt="localhost" src="https://user-images.githubusercontent.com/89585637/223465232-3a3ad8f0-d478-4ffe-a3a1-8691a0fbee2a.png">
 <img width="2287" alt="443" src="https://user-images.githubusercontent.com/89585637/223465277-31fb0e8c-8539-4f2c-8405-2d886793a8ba.png">
 **Перезапустить докер контейнер через `docker restart [container_id|container_name]`**
