@@ -67,24 +67,40 @@
 **== Задание ==**
 
 ##### Прочитать конфигурационный файл *nginx.conf* внутри докер образа через команду *exec*
-![ ](Images/8.png)
 ##### Создать на локальной машине файл *nginx.conf*
-![ ](Images/9.png)
+
+![image](https://user-images.githubusercontent.com/89585637/223537426-7c7a39e3-3f90-4f07-bb87-98ffd86da2ab.png)
+
 ##### Настроить в нем по пути */status* отдачу страницы статуса сервера **nginx**
-![ ](Images/10.png)
+
+![image](https://user-images.githubusercontent.com/89585637/223537344-0ad3f821-81c8-4ebe-8cfb-0e87626c7109.png)
+
 ##### Скопировать созданный файл *nginx.conf* внутрь докер образа через команду `docker cp`
-![ ](Images/11.png)
+
+![image](https://user-images.githubusercontent.com/89585637/223535469-022ebd6d-df63-40fb-8594-c32c5e6267f1.png)
+
 ##### Перезапустить **nginx** внутри докер образа через команду *exec*
+
+![image](https://user-images.githubusercontent.com/89585637/223536245-6e244320-80a3-4e9f-a854-a794ff5993d2.png)
+
 ##### Проверить, что по адресу *localhost:80/status* отдается страничка со статусом сервера **nginx**
-![ ](Images/12.png)
+
 ##### Экспортировать контейнер в файл *container.tar* через команду *export*
 ##### Остановить контейнер
+
+![image](https://user-images.githubusercontent.com/89585637/223535732-bb8a0939-246d-4cec-8621-b9d1dd9aad40.png)
+
 ##### Удалить образ через `docker rmi [image_id|repository]`, не удаляя перед этим контейнеры
-![ ](Images/13.png)
 ##### Импортировать контейнер обратно через команду *import*
-![ ](Images/14.png)
+
+![image](https://user-images.githubusercontent.com/89585637/223535822-b74b7559-1cea-401c-b29f-fc27d6724a09.png)
+
 ##### Запустить импортированный контейнер
-![ ](Images/15.png)
+
+![image](https://user-images.githubusercontent.com/89585637/223535881-409f6b75-e79c-430a-b8f3-2ab99a776015.png)
+
+![image](https://user-images.githubusercontent.com/89585637/223535109-1fc9b9f6-04c6-4942-88e0-d80f02e93f6c.png)
+
 
 ## Part 3. Мини веб-сервер
 
@@ -92,13 +108,31 @@
 
 **== Задание ==**
 
+![image](https://user-images.githubusercontent.com/89585637/223534328-d34a873d-9774-4250-8c21-292a7c1c4ce0.png)
+
+![image](https://user-images.githubusercontent.com/89585637/223536786-fa1471fc-3b57-4528-a156-21548766a233.png)
+
 ##### Написать мини сервер на **C** и **FastCgi**, который будет возвращать простейшую страничку с надписью `Hello World!`
+
+![image](https://user-images.githubusercontent.com/89585637/223534177-e5ce0ec9-121e-4722-b262-5ebd6307c0b8.png)
+
 ##### Запустить написанный мини сервер через *spawn-cgi* на порту 8080
+
+![image](https://user-images.githubusercontent.com/89585637/223536562-1ea6feaa-6585-4c4c-949e-074a1d544443.png)
+
+![image](https://user-images.githubusercontent.com/89585637/223534569-35a0964b-825f-4327-94ff-fab726dd302e.png)
+
 ##### Написать свой *nginx.conf*, который будет проксировать все запросы с 81 порта на *127.0.0.1:8080*
+
+![image](https://user-images.githubusercontent.com/89585637/223534413-74d7fed2-c18e-4608-bbc6-edb19a0df1bd.png)
+
 ##### Проверить, что в браузере по *localhost:81* отдается написанная вами страничка
+
+![image](https://user-images.githubusercontent.com/89585637/223534800-8583eec8-6967-400b-a5ba-6b72b6bb9c65.png)
+
+![image](https://user-images.githubusercontent.com/89585637/223534475-3a5ea697-e075-4e3f-b552-49760e70fee6.png)
+
 ##### Положить файл *nginx.conf* по пути *./nginx/nginx.conf* (это понадобиться позже)
-![ ](Images/16.png)
-![ ](Images/17.png)
 
 ## Part 4. Свой докер
 
@@ -114,23 +148,30 @@
 ##### 3) копирует внутрь образа написанный *./nginx/nginx.conf*
 ##### 4) запускает **nginx**.
 _**nginx** можно установить внутрь докера самостоятельно, а можно воспользоваться готовым образом с **nginx**'ом, как базовым._
-![ ](Images/18.png)
-![ ](Images/18.1.png)
+
 ##### Собрать написанный докер образ через `docker build` при этом указав имя и тег
 docker build -f Dockerfile -t my_docker_image:task4 "../"
-![ ](Images/19.png)
+
+![image](https://user-images.githubusercontent.com/89585637/223532803-b1bce28a-4da5-40dc-8d32-95ee3db09588.png)
+
 ##### Проверить через `docker images`, что все собралось корректно
-![ ](Images/20.png)
+
 ##### Запустить собранный докер образ с маппингом 81 порта на 80 на локальной машине и маппингом папки *./nginx* внутрь контейнера по адресу, где лежат конфигурационные файлы **nginx**'а (см. [Часть 2](#part-2-операции-с-контейнером))
 docker run --name my_docker_container -p 80:81 -v $(pwd)/../nginx/nginx.conf:/etc/nginx/nginx.conf -dt my_docker_image:task4
-![ ](Images/21.png)
+
+![image](https://user-images.githubusercontent.com/89585637/223533110-bbbd1a66-00d4-4ebf-88e1-6e485b3d55ed.png)
+
 ##### Проверить, что по localhost:80 доступна страничка написанного мини сервера
-![ ](Images/22.png)
 ##### Дописать в *./nginx/nginx.conf* проксирование странички */status*, по которой надо отдавать статус сервера **nginx**
+
+![image](https://user-images.githubusercontent.com/89585637/223533865-9d5b2c50-3d94-400d-8121-fba0e7401314.png)
+
 ##### Перезапустить докер образ
 *Если всё сделано верно, то, после сохранения файла и перезапуска контейнера, конфигурационный файл внутри докер образа должен обновиться самостоятельно без лишних действий*
 ##### Проверить, что теперь по *localhost:80/status* отдается страничка со статусом **nginx**
-![ ](Images/23.png)
+
+![image](https://user-images.githubusercontent.com/89585637/223533548-cdbe449a-e1c2-4c33-ae52-d0efdaa42c0c.png)
+
 
 ## Part 5. **Dockle**
 
@@ -142,12 +183,17 @@ docker run --name my_docker_container -p 80:81 -v $(pwd)/../nginx/nginx.conf:/et
 ##### Исправить контейнер так, чтобы при проверке через **dockle** не было ошибок и предупреждений
 ДО:
 dockle my_docker_image:task4
-![ ](Images/32.png)
+
+![image](https://user-images.githubusercontent.com/89585637/223532622-051354e1-b265-468f-8d80-b6f8a79bb3de.png)
+
+![image](https://user-images.githubusercontent.com/89585637/223525701-3a0bd2ce-2c12-4cc8-a234-2ff7efc063d0.png)
+
 ПОСЛЕ:
 docker build -f Dockerfile_task5 -t my_docker_image:task5 "../"
 docker run --name my_docker_container -p 80:81 -v $(pwd)/../nginx/nginx.conf:/etc/nginx/nginx.conf -dt my_docker_image:task5
-![ ](Images/25.png)
-![ ](Images/24.png)
+
+![image](https://user-images.githubusercontent.com/89585637/223525789-c578b14e-7450-4f4e-99e2-9fc9918ed611.png)
+![image](https://user-images.githubusercontent.com/89585637/223525752-c03ae8f8-cbe8-47d2-8110-1a3eb4109826.png)
 
 ## Part 6. Базовый **Docker Compose**
 
@@ -160,15 +206,16 @@ docker run --name my_docker_container -p 80:81 -v $(pwd)/../nginx/nginx.conf:/et
 ##### 1) Поднять докер контейнер из [Части 5](#part-5-инструмент-dockle) _(он должен работать в локальной сети, т.е. не нужно использовать инструкцию **EXPOSE** и мапить порты на локальную машину)_
 ##### 2) Поднять докер контейнер с **nginx**, который будет проксировать все запросы с 8080 порта на 81 порт первого контейнера
 ##### Замапить 8080 порт второго контейнера на 80 порт локальной машины
-![ ](Images/26.png)
-![ ](Images/27.png)
-![ ](Images/28.png)
+
 
 ##### Остановить все запущенные контейнеры
 docker ps -q | xargs docker stop
-![ ](Images/29.png)
+
+![image](https://user-images.githubusercontent.com/89585637/223525422-a92e718c-3b61-4377-90e4-85bbdb152386.png)
 
 ##### Собрать и запустить проект с помощью команд `docker-compose build` и `docker-compose up`
 ##### Проверить, что в браузере по *localhost:80* отдается написанная вами страничка, как и ранее
-![ ](Images/30.png)
-![ ](Images/31.png)
+
+![image](https://user-images.githubusercontent.com/89585637/223525233-f872dfde-5899-45bb-b556-ec281e095adf.png)
+![image](https://user-images.githubusercontent.com/89585637/223532394-811fc3b7-dc5e-4485-99f5-2e49f772b346.png)
+
