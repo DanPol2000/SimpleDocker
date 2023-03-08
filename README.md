@@ -181,11 +181,11 @@ docker run -it -p 80:81 -v /Users/chorse/Desktop/nginx.conf:/etc/nginx/nginx.con
 ##### Просканировать контейнер из предыдущего задания через `dockle [container_id|container_name]`
 dockle -i CIS-DI-0010 my_d:v1
 
-##### Исправить контейнер так, чтобы при проверке через **dockle** не было ошибок и предупреждений
-
 ![image](https://user-images.githubusercontent.com/89585637/223532622-051354e1-b265-468f-8d80-b6f8a79bb3de.png)
 
 ![image](https://user-images.githubusercontent.com/89585637/223525701-3a0bd2ce-2c12-4cc8-a234-2ff7efc063d0.png)
+
+##### Исправить контейнер так, чтобы при проверке через **dockle** не было ошибок и предупреждений
 
 ![image](https://user-images.githubusercontent.com/89585637/223525789-c578b14e-7450-4f4e-99e2-9fc9918ed611.png)
 ![image](https://user-images.githubusercontent.com/89585637/223525752-c03ae8f8-cbe8-47d2-8110-1a3eb4109826.png)
