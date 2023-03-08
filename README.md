@@ -75,9 +75,6 @@
 ![image](https://user-images.githubusercontent.com/89585637/223537426-7c7a39e3-3f90-4f07-bb87-98ffd86da2ab.png)
 
 ##### Настроить в нем по пути */status* отдачу страницы статуса сервера **nginx**
-
-![image](https://user-images.githubusercontent.com/89585637/223537344-0ad3f821-81c8-4ebe-8cfb-0e87626c7109.png)
-
 ##### Скопировать созданный файл *nginx.conf* внутрь докер образа через команду `docker cp`
 
 ![image](https://user-images.githubusercontent.com/89585637/223535469-022ebd6d-df63-40fb-8594-c32c5e6267f1.png)
@@ -87,6 +84,8 @@
 ![image](https://user-images.githubusercontent.com/89585637/223536245-6e244320-80a3-4e9f-a854-a794ff5993d2.png)
 
 ##### Проверить, что по адресу *localhost:80/status* отдается страничка со статусом сервера **nginx**
+
+![image](https://user-images.githubusercontent.com/89585637/223537344-0ad3f821-81c8-4ebe-8cfb-0e87626c7109.png)
 
 ##### Экспортировать контейнер в файл *container.tar* через команду *export*
 ##### Остановить контейнер
