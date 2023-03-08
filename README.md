@@ -67,6 +67,9 @@
 **== Задание ==**
 
 ##### Прочитать конфигурационный файл *nginx.conf* внутри докер образа через команду *exec*
+
+<img width="1160" alt="Снимок экрана 2023-03-08 в 12 25 54" src="https://user-images.githubusercontent.com/89585637/223674720-3179b478-b882-4fd4-b662-ecfce97eaa97.png">
+
 ##### Создать на локальной машине файл *nginx.conf*
 
 ![image](https://user-images.githubusercontent.com/89585637/223537426-7c7a39e3-3f90-4f07-bb87-98ffd86da2ab.png)
