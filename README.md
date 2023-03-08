@@ -2,7 +2,7 @@
 ## Contents
   1.1. [Готовый докер](#part-1-готовый-докер) \
   1.2. [Операции с контейнером](#part-2-операции-с-контейнером) \
-  1.3. [Мини веб-сервер](#part-1-мини-веб-сервер) \
+  1.3. [Мини веб-сервер](#part-3-мини-веб-сервер) \
   1.4. [Свой докер](#part-4-свой-докер) \
   1.5. [Dockle](#part-5-dockle) \
   1.6. [Базовый Docker Compose](#part-6-базовый-docker-compose)
@@ -102,7 +102,6 @@
 ![image](https://user-images.githubusercontent.com/89585637/223535881-409f6b75-e79c-430a-b8f3-2ab99a776015.png)
 
 <img width="1451" alt="localhost status" src="https://user-images.githubusercontent.com/89585637/223676573-21f794c9-c829-4e18-bf22-bc003e6229e8.png">
-
 
 ## Part 3. Мини веб-сервер
 
