@@ -101,7 +101,7 @@
 
 ![image](https://user-images.githubusercontent.com/89585637/223535881-409f6b75-e79c-430a-b8f3-2ab99a776015.png)
 
-![image](https://user-images.githubusercontent.com/89585637/223535109-1fc9b9f6-04c6-4942-88e0-d80f02e93f6c.png)
+<img width="1451" alt="localhost status" src="https://user-images.githubusercontent.com/89585637/223676573-21f794c9-c829-4e18-bf22-bc003e6229e8.png">
 
 
 ## Part 3. Мини веб-сервер
