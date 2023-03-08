@@ -156,7 +156,7 @@ docker build -f Dockerfile -t my_docker_image:task4 "../"
 ##### Проверить через `docker images`, что все собралось корректно
 
 ##### Запустить собранный докер образ с маппингом 81 порта на 80 на локальной машине и маппингом папки *./nginx* внутрь контейнера по адресу, где лежат конфигурационные файлы **nginx**'а (см. [Часть 2](#part-2-операции-с-контейнером))
-docker run --name my_docker_container -p 80:81 -v $(pwd)/../nginx/nginx.conf:/etc/nginx/nginx.conf -dt my_docker_image:task4
+docker run -it -p 80:81 -v /Users/chorse/Desktop/nginx.conf:/etc/nginx/nginx.conf -d my_d:v1 bash
 
 ![image](https://user-images.githubusercontent.com/89585637/223533110-bbbd1a66-00d4-4ebf-88e1-6e485b3d55ed.png)
 
